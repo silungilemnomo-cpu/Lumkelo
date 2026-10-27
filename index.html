@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Study Tasks | Task Tracker</title>
+  <meta name="description" content="A simple task tracker that saves your tasks in your browser.">
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <img src="images/logo.svg" alt="" width="44" height="44">
+      <div><h1>Study Tasks</h1><p id="summary">No tasks yet</p></div>
+    </header>
+
+    <form id="taskForm" autocomplete="off">
+      <label for="taskInput" class="sr">New task</label>
+      <input id="taskInput" type="text" placeholder="What do you need to do?" maxlength="80" required>
+      <select id="priority" aria-label="Priority">
+        <option value="low">Low</option>
+        <option value="medium" selected>Medium</option>
+        <option value="high">High</option>
+      </select>
+      <button type="submit">Add task</button>
+    </form>
+
+    <div class="filters" role="group" aria-label="Show tasks">
+      <button class="filter active" data-filter="all">All</button>
+      <button class="filter" data-filter="active">To do</button>
+      <button class="filter" data-filter="done">Done</button>
+    </div>
+
+    <ul id="taskList" class="tasks"></ul>
+    <div id="empty" class="empty" hidden>
+      <img src="images/empty.svg" alt="">
+      <p>Nothing here. Add your first task above.</p>
+    </div>
+
+    <button id="clearDone" class="link-btn">Remove finished tasks</button>
+  </main>
+  <script src="js/script.js"></script>
+</body>
+</html>

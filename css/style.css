@@ -1,0 +1,30 @@
+:root{--bg:#eef2fb;--card:#fff;--ink:#14213d;--muted:#5b6785;--blue:#1d4ed8;--line:#d9e0f2;--high:#c2410c;--medium:#a16207;--low:#15803d}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:flex;justify-content:center;padding:3rem 1rem;background:var(--bg);color:var(--ink);font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+.app{width:100%;max-width:620px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:2rem;align-self:flex-start}
+header{display:flex;gap:1rem;align-items:center;margin-bottom:1.5rem}
+h1{margin:0;font-size:1.7rem;letter-spacing:-.01em}
+#summary{margin:0;color:var(--muted)}
+.sr{position:absolute;left:-9999px}
+form{display:flex;gap:.5rem;flex-wrap:wrap}
+input,select,button{font:inherit}
+#taskInput{flex:1 1 200px;padding:.7rem .9rem;border:1.5px solid var(--line);border-radius:8px}
+select{padding:.7rem;border:1.5px solid var(--line);border-radius:8px;background:#fff}
+form button{padding:.7rem 1.2rem;border:0;border-radius:8px;background:var(--blue);color:#fff;font-weight:700;cursor:pointer}
+form button:hover{background:#1e40af}
+.filters{display:flex;gap:.5rem;margin:1.3rem 0 .8rem}
+.filter{padding:.35rem 1rem;border:1.5px solid var(--line);border-radius:999px;background:transparent;color:var(--muted);font-weight:600;cursor:pointer}
+.filter.active{background:var(--ink);border-color:var(--ink);color:#fff}
+.tasks{list-style:none;margin:0;padding:0;display:grid;gap:.5rem}
+.task{display:flex;align-items:center;gap:.8rem;padding:.75rem .9rem;border:1px solid var(--line);border-radius:10px}
+.task input{width:20px;height:20px;accent-color:var(--blue)}
+.task span.text{flex:1;word-break:break-word}
+.task.done span.text{text-decoration:line-through;color:var(--muted)}
+.tag{font-size:.8rem;font-weight:700;padding:.1rem .6rem;border-radius:999px;border:1.5px solid currentColor}
+.tag.high{color:var(--high)}.tag.medium{color:var(--medium)}.tag.low{color:var(--low)}
+.del{border:0;background:transparent;color:var(--muted);font-size:1.3rem;cursor:pointer;padding:0 .3rem}
+.del:hover{color:var(--high)}
+.empty{text-align:center;color:var(--muted);padding:1.5rem 0}
+.empty img{width:140px}
+.link-btn{margin-top:1.2rem;border:0;background:transparent;color:var(--blue);font-weight:600;text-decoration:underline;cursor:pointer}
